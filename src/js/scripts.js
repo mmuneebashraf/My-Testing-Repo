@@ -7,11 +7,11 @@ import { EffectComposer } from '/src/js/EffectComposer.js';
 import { UnrealBloomPass } from '/src/js/UnrealBloomPass.js';
 
 import starsTexture from '/public/img/stars.jpg';
-//import sunTexture from '/public/img/sun.jpg';
-//import mercuryTexture from '/public/img/mercury.jpg';
-//import venusTexture from '/public/img/venus.jpg';
-//import earthTexture from '/public/img/earth.jpg';
-//import marsTexture from '/public/img/mars.jpg'; 
+import sunTexture from '/public/img/sun.jpg';
+import mercuryTexture from '/public/img/mercury.jpg';
+import venusTexture from '/public/img/venus.jpg';
+import earthTexture from '/public/img/earth.jpg';
+import marsTexture from '/public/img/mars.jpg'; 
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
