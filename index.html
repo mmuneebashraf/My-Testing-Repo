@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Simon's Portfolio</title>
+    <link rel="stylesheet" href="./styles.css"> <!-- Link to external CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;400&display=swap" rel="stylesheet"> 
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="container">
+        <div id="threejs-container"></div>
+        <button id="rB" type="button">[->]</button>
+        <button id="lB" type="button">[>-]</button>
+    </div>
+    <img id="gif1" src="gif/mini.gif" alt="gif/Untitled video.gif" class="trailers">
+    <img id="gif2" src="gif/corgi.gif" alt="gif/Untitled video.gif" class="trailers">
+    <img id="gif3" src="gif/golden.gif" alt="gif/Untitled video.gif" class="trailers">
+    <img id="gif4" src="gif/blackout.gif" alt="gif/Untitled video.gif" class="trailers">
+    <div id="planetName">Game Design</div>
+    <div id="planetDesc" class="kanit-thin">Projects Timeline</div>
+    <div id="overview"></div>
+    <div id="overviewDesc" class="kanit-thin"></div>
+    <div id="skills"></div>
+    <div id="skillList" class="kanit-thin"></div>
+    <script type="module" src="./src/js/scripts.js"></script>
+    <script>
+        const rBtn = document.getElementById("rB");
+        rBtn.addEventListener("click", function(e) {
+            camNext();
+        });
+        const lBtn = document.getElementById("lB");
+        lBtn.addEventListener("click", function(e) {
+            camPrev();
+        });
+    </script>
+</body>
+</html>

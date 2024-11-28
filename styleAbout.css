@@ -1,0 +1,79 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
+    height: 100%;
+    font-family: 'Kanit', sans-serif; 
+}
+
+/* New class for thin font weight */
+.kanit-thin {
+    font-weight: 100;
+}
+
+#threejs-container {
+    position: absolute;
+    top: 50px; /* Adjust as needed to the height of your nav bar */
+    left: 0;
+    width: 100%; /* Adjust as needed */
+    height: calc(100% - 50px); /* Adjust as needed to the height of your nav bar */
+}
+
+:root {
+    --offset-right: 0px; /* Default value, will be overwritten */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Make the banner fixed at the top */
+    top: 0;
+    width: 100%;
+    z-index: 10000; /* Ensure the nav bar is above other elements */
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+} /* Change the link color to #111 (black) on hover */
+
+#Header {
+    position: absolute;
+    top: 10%;
+    left: 17%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 45px;
+    z-index: 1002; /* Ensure it's above other elements */
+}
+
+#Description {
+    position: absolute;
+    top: 22%;
+    left: 5%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 25px;
+    z-index: 101; 
+    max-width: 40%;
+    border: 2px solid white; /* Add a white border */
+}
+
