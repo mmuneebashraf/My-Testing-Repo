@@ -6,12 +6,12 @@ import { RenderPass } from '/src/js/RenderPass.js';
 import { EffectComposer } from '/src/js/EffectComposer.js';
 import { UnrealBloomPass } from '/src/js/UnrealBloomPass.js';
 
-import starsTexture from 'img/stars.jpg';
-//import sunTexture from 'img/sun.jpg';
-//import mercuryTexture from 'img/mercury.jpg';
-//import venusTexture from 'img/venus.jpg';
-//import earthTexture from 'img/earth.jpg';
-//import marsTexture from 'img/mars.jpg'; 
+import starsTexture from '/public/img/stars.jpg';
+//import sunTexture from '/public/img/sun.jpg';
+//import mercuryTexture from '/public/img/mercury.jpg';
+//import venusTexture from '/public/img/venus.jpg';
+//import earthTexture from '/public/img/earth.jpg';
+//import marsTexture from '/public/img/mars.jpg'; 
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -56,7 +56,7 @@ const textureLoader = new THREE.TextureLoader();
 
 const sunGeo = new THREE.SphereGeometry(16, 30, 30);
 const sunMat = new THREE.MeshBasicMaterial({
-    map: textureLoader.load('img/sun.jpg')
+    map: textureLoader.load('/public/img/sun.jpg')
 });
 const sun = new THREE.Mesh(sunGeo, sunMat);
 scene.add(sun);
@@ -87,10 +87,10 @@ function createPlanet(size, texture, position, ring) {
     mesh.position.x = position;
     return { mesh, obj };
 }
-const mercury = createPlanet(3.2, 'img/mercury.jpg', 119);
-const venus = createPlanet(5.8, 'img/venus.jpg', 270);
-const earth = createPlanet(6, 'img/earth.jpg', 360);
-const mars = createPlanet(4, 'img/mars.jpg', 480);
+const mercury = createPlanet(3.2, '/public/img/mercury.jpg', 119);
+const venus = createPlanet(5.8, '/public/img/venus.jpg', 270);
+const earth = createPlanet(6, '/public/img/earth.jpg', 360);
+const mars = createPlanet(4, '/public/img/mars.jpg', 480);
 
 const pointLight = new THREE.PointLight(0xFFFFFF, 2, 600); //sunlight
 scene.add(pointLight);
